@@ -1682,7 +1682,7 @@ class NumericNormalizer(object):
             max_number: int = None) -> List[int]:
         return [str(v) for _, v in self.get_word_number_mapping(lang).items() if max_number is None or v < max_number]
 
-    def map_sentence(
+    def format_sentence(
             self,
             sentence: str,
             lang: str,
@@ -1693,7 +1693,7 @@ class NumericNormalizer(object):
             lang=lang,
             max_number=max_number
         )) + r')\b', re.IGNORECASE)
-        text = word_pattern.sub(lambda x: str(self.word_to_number(
+        sentence = word_pattern.sub(lambda x: str(self.word_to_number(
             word=x.group().lower(),
             lang=lang)
         ), sentence)
@@ -1709,9 +1709,9 @@ class NumericNormalizer(object):
             lang=lang,
             max_number=max_number
         )) + r')\b')
-        text = digit_pattern.sub(lambda x: format(
+        sentence = digit_pattern.sub(lambda x: format(
             word=self.number_to_word(int(x.group()), lang),
             number=int(x.group())
-        ), text)
+        ), sentence)
 
-        return text
+        return sentence

@@ -15,7 +15,7 @@ if __name__ == "__main__":
         print(f"    input=`{input}`")
         print(f"    lang=`{lang}`")
         print(f"    excepted_result=`{expected_result}`")
-        actual_result = normalizer.map_sentence(
+        actual_result = normalizer.format_sentence(
             sentence=input,
             lang=lang,
         )
