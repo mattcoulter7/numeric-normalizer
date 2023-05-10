@@ -1,7 +1,6 @@
-from normalizer import NumericNormalizer
+from numericnormalizer import normalizer
 
 if __name__ == "__main__":
-    normalizer: NumericNormalizer = NumericNormalizer()
     test_cases = [
         (("I have 4 apples and five oranges.", "en"), "I have four (4) apples and five (5) oranges."),
         (("I have -4 apples and -five oranges.", "en"), "I have -four (-4) apples and -five (-5) oranges."),
