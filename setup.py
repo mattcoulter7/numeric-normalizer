@@ -24,7 +24,7 @@ setup(
     install_requires=[],
     keywords=['python', 'nlp', 'numeric', 'sentence', 'language', 'convert', 'regex'],
     classifiers=[
-        "Development Status :: Adlib",
+        "Development Status :: 1 - Planning",
         "Intended Audience :: Developers",
         "Programming Language :: Python :: 3",
         "Operating System :: Unix",
